@@ -95,6 +95,7 @@ with tab_single:
                 min_value=float(features[feature].min()),
                 max_value=float(features[feature].max()),
                 value=float(features[feature].median()),
+                step=0.00001 if feature == "density" else 0.01,
                 format="%.5f",
                 key=f"input_{feature}",
             )
